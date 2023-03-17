@@ -17,6 +17,11 @@ namespace incremental_testbed
 
         private bool UselessInFirstPR = true;
 
+        private void Useless()
+        {
+
+        }
+
         //
     }
 }
