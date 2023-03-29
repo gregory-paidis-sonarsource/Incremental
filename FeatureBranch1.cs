@@ -15,6 +15,7 @@ namespace incremental_testbed
             Console.WriteLine("Hello from feature branch #1");
         }
 
+
         private bool UselessInFirstPR = true;
 
         private void Useless()
