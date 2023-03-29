@@ -8,6 +8,8 @@ namespace incremental_testbed
 {
     public class FeatureBranch2
     {
+        private int _unused = 42;
+
         public void DoWork()
         {
             Console.WriteLine("Hello from feature branch #2");
@@ -26,5 +28,6 @@ namespace incremental_testbed
         // Random comment
 
         // 
+
     }
 }
