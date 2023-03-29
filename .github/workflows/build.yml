@@ -24,10 +24,10 @@ jobs:
       - name: BEGIN step 
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./SonarScanner.MSBuild.exe begin /o:greggy42 /k:AutomaticDetectionGithubActions `/d:sonar.host.url=https://sonarcloud.io /d:sonar.login=$SONAR_TOKEN /d:sonar.verbose=true 
+        run: ./sonarscanner-msbuild-net46/SonarScanner.MSBuild.exe begin /o:greggy42 /k:AutomaticDetectionGithubActions `/d:sonar.host.url=https://sonarcloud.io /d:sonar.login=$SONAR_TOKEN /d:sonar.verbose=true 
       - name: BUILD step
         run: dotnet build --no-incremental 
       - name: END step
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./SonarScanner.MSBuild.exe end /d:sonar.login=$SONAR_TOKEN
+        run: ./sonarscanner-msbuild-net46/SonarScanner.MSBuild.exe end /d:sonar.login=$SONAR_TOKEN
