@@ -24,7 +24,7 @@ jobs:
       - name: BEGIN step 
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./sonarscanner-msbuild-net46/SonarScanner.MSBuild.exe begin /o:smarichal /k:sebastien-marichal_Incremental /d:sonar.host.url=https://sonarcloud.io /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.verbose=true 
+        run: ./sonarscanner-msbuild-net46/SonarScanner.MSBuild.exe begin /o:smarichal /k:incre2 /d:sonar.host.url=https://sonarcloud.io /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.verbose=true 
       - name: BUILD step
         run: dotnet build --no-incremental 
       - name: END step
