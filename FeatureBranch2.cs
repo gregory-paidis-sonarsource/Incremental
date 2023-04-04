@@ -11,6 +11,7 @@ namespace incremental_testbed
         public void DoWork()
         {
             Console.WriteLine("Hello from feature branch #2");
+            // TODO: Should do something !
         }
 
         void Empty()
